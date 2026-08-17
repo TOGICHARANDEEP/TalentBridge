@@ -79,6 +79,21 @@ The backend runs on:
 - Add an admin dashboard
 - Deploy the frontend and backend
 
+## Screenshots
+
+### Home Page
+![Home Page](screenshots/homepage.png)
+
+### Jobs Page
+![Products](screenshots/jobspage.png)
+
+### Login Page
+![Cart](screenshots/loginpage.png)
+
+### Register Page
+![Checkout](screenshots/registerpage.png)
+
+
 ## Author
 
 Togi Charan Deep
