@@ -1,60 +1,86 @@
-# TalentBridge — Job Portal Web Application
+# TalentBridge
 
-A responsive job portal with candidate and recruiter experiences, built with
-React, Tailwind CSS, and a small Express API.
+TalentBridge is a job portal that connects candidates with recruiters. Candidates can search and explore job opportunities, while recruiters can create and manage their job listings through a dedicated dashboard.
 
 ## Features
 
-- **Job search & filtering** — search by title, company, or skill, and filter by location and job type.
-- **Recruiter dashboard** — post, edit, and delete job listings from a dedicated workspace.
-- **Client-side auth** — registration and login backed by `localStorage`, with a `candidate` / `recruiter` role split and protected routes.
-- **REST API** — Express + JSON file storage exposes `GET/POST/PUT/DELETE /api/jobs`, with a mock-data fallback in the UI if the API isn't running.
-- **Responsive UI** — mobile-first layouts, custom Tailwind theme, and a distinct navy/gold visual identity.
+- Search jobs by title, company, or skill
+- Filter jobs by location and job type
+- View detailed job information
+- Candidate and recruiter login
+- Recruiter dashboard for adding, editing, and deleting jobs
+- Protected recruiter dashboard
+- REST API for job listings
+- Responsive design for desktop and mobile
+- Client-side login and role information using localStorage
 
-## Tech stack
+## Tech Stack
 
-React 18 · Vite · JavaScript · Tailwind CSS · React Router · Node.js · Express
+- React
+- JavaScript
+- Tailwind CSS
+- React Router
+- Node.js
+- Express.js
+- Vite
+- localStorage
 
-## Project structure
+## Getting Started
 
-```
-job-portal/
-├─ src/               # React app (Vite)
-│  ├─ components/     # Navbar, Footer, JobCard, ProtectedRoute
-│  ├─ context/         # AuthContext (localStorage-backed)
-│  ├─ data/            # mockJobs.js — offline fallback data
-│  └─ pages/           # Home, Login, Register, Jobs, JobDetail, RecruiterDashboard
-└─ server/             # Express API
-   ├─ data/jobs.json   # File-based job store
-   └─ routes/jobs.js   # CRUD endpoints
-```
+### Prerequisites
 
-## Getting started
+Make sure you have the following installed:
 
-**1. Start the API (optional but recommended):**
+- Node.js
+- npm
+- Git
 
-```bash
-cd server
-npm install
-npm run dev        # http://localhost:4000
-```
+### Installation
 
-**2. Start the frontend (in a new terminal):**
+Clone the repository:
 
-```bash
-npm install
-npm run dev         # http://localhost:5173
-```
+    git clone https://github.com/TOGICHARANDEEP/TalentBridge.git
 
-The Vite dev server proxies `/api/*` to `http://localhost:4000`. If the API
-isn't running, the app gracefully falls back to bundled mock job data so the
-UI is always browsable.
+Go to the project folder:
 
-## Notes
+    cd TalentBridge
 
-- Auth is intentionally client-side (`localStorage`) to keep the demo
-  dependency-free — see `src/context/AuthContext.jsx` for the implementation.
-  In a production build this would be swapped for JWT/session auth on the
-  Express server.
-- Only users who register with the **"I'm hiring"** role can access
-  `/dashboard`.
+Install the dependencies:
+
+    npm install
+
+Start the development server:
+
+    npm run dev
+
+Open the local URL shown in the terminal to view the application.
+
+### Backend Setup
+
+If the project uses the Express backend, open another terminal and run:
+
+    cd server
+    npm install
+    npm run dev
+
+The backend runs on:
+
+    http://localhost:4000
+
+## Future Improvements
+
+- Add MongoDB for users and job listings
+- Add proper server-side authentication
+- Add JWT or session-based authentication
+- Add resume upload
+- Add job application functionality
+- Add application tracking
+- Add email notifications
+- Add an admin dashboard
+- Deploy the frontend and backend
+
+## Author
+
+Togi Charan Deep
+
+GitHub: https://github.com/TOGICHARANDEEP
